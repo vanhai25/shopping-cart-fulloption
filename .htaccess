@@ -1,0 +1,25 @@
+RewriteEngine on
+
+
+
+RewriteRule ^trang-chu$ index.php?page=home 
+RewriteRule ^ca-nhan$ index.php?page=profile
+RewriteRule ^gio-hang$ index.php?page=cart
+RewriteRule ^thanh-toan$ index.php?page=checkout 
+RewriteRule ^dang-nhap$ index.php?page=login 
+RewriteRule ^dang-ky$ index.php?page=register
+
+
+
+
+
+RewriteRule ^([a-zA-Z0-9_-]+).shop$ index.php?page=shop&shop=$1
+RewriteRule ^([a-zA-Z0-9_-]+).shop/([0-9]+)$ index.php?page=shop&shop=$1&pagi=$2
+RewriteRule ^([a-zA-Z0-9_-]+).shop/([a-zA-Z0-9_-]+)$ index.php?page=shop&shop=$1&menu=$2
+RewriteRule ^([a-zA-Z0-9_-]+).shop/([a-zA-Z0-9_-]+)/([0-9]+)$ index.php?page=shop&shop=$1&menu=$2&pagi=$3
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=catalog&url=$1
+RewriteRule ^([a-zA-Z0-9-]+)/([0-9]+)$ index.php?page=catalog&url=$1&pagi=$2
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?page=product&url=$1&title=$2&id=$3
+
+
